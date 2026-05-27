@@ -1,0 +1,44 @@
+name: Generate Education Daily
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate report
+        run: node scripts/generate.js
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      - name: Commit files
+
+        run: |
+
+          git config --local user.email "action@github.com"
+
+          git config --local user.name "github-actions"
+
+          git add .
+
+          git commit -m "daily update" || echo "No changes"
+
+          git push
