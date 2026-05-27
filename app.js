@@ -1,92 +1,194 @@
-async function loadDailyData() {
+async function loadDailyReport() {
 
-  const response = await fetch("./data/latest.json");
+  try {
 
-  const dailyData = await response.json();
+    const response = await fetch("./data/latest.json");
 
+    const data = await response.json();
 
+    // 标题
+    document.getElementById("title").innerText =
+      data.title || "Education Daily 教育行业日报";
 
+    // 日期
+    document.getElementById("date").innerText =
+      data.date || "";
 
-  // 摘要
+    // 更新时间
+    document.getElementById("update-time").innerText =
+      `最后更新：${data.generatedAt || ""}`;
 
-  const summaryContainer = document.getElementById("summary-container");
+    // 摘要
+    const summaryContainer =
+      document.getElementById("summary");
 
-  dailyData.summary.forEach(item => {
+    summaryContainer.innerHTML = "";
 
-    const div = document.createElement("div");
+    data.summary.forEach(item => {
 
-    div.className = "summary-item";
+      summaryContainer.innerHTML += `
 
-    div.innerHTML = `• ${item}`;
-
-    summaryContainer.appendChild(div);
-
-  });
-
-
-
-
-  // Signal
-
-  const signalContainer = document.getElementById("signal-container");
-
-  dailyData.signals.forEach(item => {
-
-    const card = document.createElement("div");
-
-    card.className = "signal-card";
-
-    card.innerHTML = `
-    
-      <h3>${item}</h3>
-
-    `;
-
-    signalContainer.appendChild(card);
-
-  });
-
-
-
-
-  // 新闻
-
-  const newsContainer = document.getElementById("news-container");
-
-  dailyData.news.forEach(item => {
-
-    const card = document.createElement("div");
-
-    card.className = "news-card";
-
-    card.innerHTML = `
-    
-      <div class="news-top">
-
-        <div class="news-tag">
-          ${item.category}
+        <div class="summary-card">
+          ${item}
         </div>
 
-        <div class="news-source">
-          ${item.source}
+      `;
+
+    });
+
+    // 趋势信号
+    const signalsContainer =
+      document.getElementById("signals");
+
+    signalsContainer.innerHTML = "";
+
+    data.signals.forEach(item => {
+
+      signalsContainer.innerHTML += `
+
+        <div class="signal-card">
+
+          <h3>${item.title}</h3>
+
+          <p>${item.desc}</p>
+
         </div>
 
-      </div>
+      `;
 
-      <h3>${item.title}</h3>
+    });
 
-      <p>${item.desc}</p>
+    // 新闻列表
+    const newsContainer =
+      document.getElementById("news");
 
-      <div class="impact">
-        影响：${item.impact}
-      </div>
+    newsContainer.innerHTML = "";
 
-    `;
+    data.news.forEach((item, index) => {
 
-    newsContainer.appendChild(card);
+      newsContainer.innerHTML += `
 
-  });
+        <div class="news-card">
+
+          <div class="news-top">
+
+            <span class="news-rank">
+              TOP ${index + 1}
+            </span>
+
+            <span class="news-category">
+              ${item.category}
+            </span>
+
+          </div>
+
+          <h3 class="news-title">
+
+            <a 
+              href="${item.link}" 
+              target="_blank"
+            >
+              ${item.title}
+            </a>
+
+          </h3>
+
+          <div class="news-source">
+
+            来源：${item.source}
+
+          </div>
+
+          <p class="news-desc">
+
+            ${item.desc}
+
+          </p>
+
+          <div class="news-impact">
+
+            <strong>行业影响：</strong>
+
+            ${item.impact}
+
+          </div>
+
+        </div>
+
+      `;
+
+    });
+
+  } catch (error) {
+
+    console.error("日报加载失败：", error);
+
+  }
 
 }
 
-loadDailyData();
+// 历史归档
+async function loadArchives() {
+
+  const archiveList =
+    document.getElementById("archive-list");
+
+  if (!archiveList) return;
+
+  const today = new Date();
+
+  for (let i = 0; i < 30; i++) {
+
+    const d = new Date(today);
+
+    d.setDate(today.getDate() - i);
+
+    const year = d.getFullYear();
+
+    const month = String(
+      d.getMonth() + 1
+    ).padStart(2, "0");
+
+    const day = String(
+      d.getDate()
+    ).padStart(2, "0");
+
+    const dateStr =
+      `${year}-${month}-${day}`;
+
+    try {
+
+      const response = await fetch(
+        `./data/${dateStr}.json`
+      );
+
+      if (response.ok) {
+
+        archiveList.innerHTML += `
+
+          <a 
+            class="archive-item"
+            href="./data/${dateStr}.json"
+            target="_blank"
+          >
+            ${dateStr}
+          </a>
+
+        `;
+
+      }
+
+    } catch (error) {
+
+      console.log("归档不存在：", dateStr);
+
+    }
+
+  }
+
+}
+
+// 初始化
+loadDailyReport();
+
+loadArchives();
