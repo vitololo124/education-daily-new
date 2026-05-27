@@ -44,17 +44,35 @@ async function loadDailyReport() {
 
     data.signals.forEach(item => {
 
-      signalsContainer.innerHTML += `
+      // 兼容字符串格式
+      if (typeof item === "string") {
 
-        <div class="signal-card">
+        signalsContainer.innerHTML += `
 
-          <h3>${item.title}</h3>
+          <div class="signal-card">
 
-          <p>${item.desc}</p>
+            <p>${item}</p>
 
-        </div>
+          </div>
 
-      `;
+        `;
+
+      } else {
+
+        // 兼容对象格式
+        signalsContainer.innerHTML += `
+
+          <div class="signal-card">
+
+            <h3>${item.title}</h3>
+
+            <p>${item.desc}</p>
+
+          </div>
+
+        `;
+
+      }
 
     });
 
