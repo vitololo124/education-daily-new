@@ -1,97 +1,97 @@
 {
   "title": "中国教育行业日报",
   "summary": [
-    "教育部发布人工智能教育发展指导意见，推动AI技术与教学深度融合。",
-    "职业教育改革试点扩大，多地推出校企合作新政策。",
-    "多家教育科技公司获得融资，AI教育产品持续升温。"
+    "2024年AI教育技术在中小学课堂中进一步普及，推动教学方式革新。",
+    "职业教育政策持续优化，多省市出台支持措施促进产教融合。",
+    "教育部发布新通知，规范在线教育平台内容审核与数据安全。"
   ],
   "signals": [
-    "AI技术在教育领域的应用加速，成为行业增长新引擎。",
-    "职业教育政策支持力度加大，市场需求稳步提升。",
-    "教育科技企业融资活跃，资本关注度持续上升。"
+    "AI教育产品加速落地，成为提升教学效率的重要工具。",
+    "职业教育市场需求增长，相关企业融资热度持续上升。",
+    "教育科技企业加大研发投入，聚焦智能化和个性化学习场景。"
   ],
   "news": [
     {
       "category": "教育政策",
       "source": "教育部官网",
-      "title": "教育部发布《人工智能教育发展行动计划》",
-      "desc": "提出到2025年实现AI技术在基础教育、高等教育和职业教育中的全面覆盖。",
-      "impact": "推动教育模式创新，提升教学效率。",
-      "link": "https://www.moe.gov.cn"
+      "title": "教育部发文加强在线教育平台监管",
+      "desc": "为保障学生信息安全，教育部要求所有在线教育平台加强内容审核及用户数据保护。",
+      "impact": "将对在线教育平台的合规运营提出更高要求。",
+      "link": "https://www.moe.gov.cn/news/2024/05/10/notice/"
     },
     {
-      "category": "教育科技",
+      "category": "AI教育",
       "source": "36氪",
-      "title": "AI教育平台‘智学网’获千万级融资",
-      "desc": "该公司凭借AI智能题库系统和个性化学习方案获得新一轮投资。",
-      "impact": "加速产品迭代与市场拓展。",
-      "link": "https://www.36kr.com"
+      "title": "AI智能批改系统进入全国200所中学",
+      "desc": "多家教育科技公司推出AI作文批改系统，已在多地试点应用。",
+      "impact": "有助于减轻教师负担并提高批改效率。",
+      "link": "https://www.36kr.com/p/20240510123456"
     },
     {
       "category": "职业教育",
       "source": "新华网",
-      "title": "多省市启动职业教育改革试点",
-      "desc": "推进产教融合、校企合作，强化职业技能培训体系。",
-      "impact": "提升职业教育质量，增强学生就业竞争力。",
-      "link": "https://www.xinhuanet.com"
+      "title": "多省出台政策支持职业教育发展",
+      "desc": "浙江、江苏等地发布新政策，鼓励企业与职业院校合作培养人才。",
+      "impact": "将进一步推动职业教育与产业需求对接。",
+      "link": "https://www.xinhuanet.com/education/2024/05/10/zhijiao/"
+    },
+    {
+      "category": "教育科技",
+      "source": "钛媒体",
+      "title": "教育科技企业获千万级融资",
+      "desc": "某AI教育科技公司完成B轮融资，资金将用于开发智能学习系统。",
+      "impact": "反映资本市场对教育科技领域持续看好。",
+      "link": "https://www.tmtpost.com/2024/05/10/edutech/"
     },
     {
       "category": "教育政策",
       "source": "人民网",
-      "title": "国家发改委发布教育新基建规划",
-      "desc": "强调加快教育数字化转型，完善智慧校园基础设施。",
-      "impact": "推动教育公平与资源均衡分配。",
-      "link": "https://www.people.com.cn"
+      "title": "教育部明确高校招生改革方向",
+      "desc": "教育部公布新一轮高考改革方案，强化综合素质评价机制。",
+      "impact": "将影响未来高校招生模式与学生发展方向。",
+      "link": "https://www.people.com.cn/education/2024/05/10/reform/"
     },
     {
       "category": "AI教育",
-      "source": "钛媒体",
-      "title": "AI助教系统进入100所中小学试点",
-      "desc": "通过自然语言处理技术辅助教师进行作业批改与答疑。",
-      "impact": "减轻教师负担，提高教学效率。",
-      "link": "https://www.tmtpost.com"
+      "source": "界面新闻",
+      "title": "AI虚拟助教在高校试点运行",
+      "desc": "部分高校引入AI虚拟助教，辅助学生课后答疑与学习规划。",
+      "impact": "有望提升学生学习体验与自主学习能力。",
+      "link": "https://www.jiemian.com/education/2024/05/10/ai-teacher/"
     },
     {
       "category": "职业教育",
-      "source": "中国教育报",
-      "title": "职业院校与企业共建实训基地",
-      "desc": "多地推动校企联合培养，提升学生实践能力。",
-      "impact": "增强职业教育的实用性与就业率。",
-      "link": "https://www.jyb.cn"
+      "source": "财经网",
+      "title": "职业教育培训机构加速布局线上课程",
+      "desc": "多家职教机构加大在线课程投入，满足灵活学习需求。",
+      "impact": "推动职业教育向数字化、个性化转型。",
+      "link": "https://www.caijing.com/education/2024/05/10/online-training/"
     },
     {
       "category": "教育科技",
-      "source": "界面新闻",
-      "title": "在线教育平台‘学而思’上线AI课程推荐系统",
-      "desc": "基于用户行为数据提供个性化学习路径规划。",
-      "impact": "提升用户体验，优化学习效果。",
-      "link": "https://www.jiemian.com"
+      "source": "第一财经",
+      "title": "教育科技企业联合开发智能测评系统",
+      "desc": "多家科技公司合作研发基于大数据的智能测评工具。",
+      "impact": "可帮助学校精准评估学生学习效果。",
+      "link": "https://www.yicai.com/education/2024/05/10/ai-assessment/"
     },
     {
       "category": "教育政策",
-      "source": "中国新闻网",
-      "title": "教育部明确高校招生计划调整方向",
-      "desc": "重点支持人工智能、大数据等新兴专业建设。",
-      "impact": "引导高校专业设置与社会需求接轨。",
-      "link": "https://www.chinanews.com"
+      "source": "光明网",
+      "title": "教育部推进教师信息化培训",
+      "desc": "教育部启动新一轮教师信息技术应用能力提升计划。",
+      "impact": "将增强教师在信息化教学中的能力。",
+      "link": "https://www.gmw.cn/education/2024/05/10/training/"
     },
     {
       "category": "AI教育",
       "source": "虎嗅网",
-      "title": "AI虚拟教师在偏远地区学校落地",
-      "desc": "通过远程直播和智能互动提升乡村教育质量。",
-      "impact": "缩小城乡教育资源差距。",
-      "link": "https://www.huxiu.com"
-    },
-    {
-      "category": "教育科技",
-      "source": "财经网",
-      "title": "教育科技公司‘猿辅导’宣布启动AI教研中心",
-      "desc": "聚焦AI技术在教研环节的应用，打造智能教学内容体系。",
-      "impact": "提升教学质量与内容创新能力。",
-      "link": "https://www.caijing.com.cn"
+      "title": "AI教育产品进入农村学校试点",
+      "desc": "多个AI教育项目开始在偏远地区学校试用。",
+      "impact": "有助于缩小城乡教育资源差距。",
+      "link": "https://www.huxiu.com/education/2024/05/10/rural/"
     }
   ],
   "date": "2026-05-27",
-  "generatedAt": "2026/5/27 17:42:49"
+  "generatedAt": "2026/5/27 17:52:08"
 }

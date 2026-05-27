@@ -2,79 +2,78 @@
 <html lang="zh-CN">
 
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>教育行业日报</title>
+  <title>Education Daily 教育行业日报</title>
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles.css" />
+
 </head>
 
 <body>
 
   <div class="container">
 
-    <section class="hero">
+    <!-- 顶部 -->
 
-      <div class="top-label">
-        AI 驱动 · 教育行业情报
-      </div>
+    <header class="hero">
 
-      <h1>
-        Education Daily<br>
-        教育行业日报
+      <h1 id="title">
+        Education Daily 教育行业日报
       </h1>
 
-      <p class="hero-desc">
-        聚焦教育、AI教育、职业教育与教育科技。
-      </p>
+      <div id="date" class="date"></div>
+
+      <div id="update-time" class="update-time"></div>
+
+    </header>
+
+    <!-- 历史归档 -->
+
+    <section class="archive-section">
+
+      <h2>历史归档</h2>
+
+      <div id="archive-list"></div>
 
     </section>
 
-<section class="section">
+    <!-- 摘要 -->
 
-  <div class="section-title">
-    <h2>今日摘要</h2>
-  </div>
+    <section>
 
-  <div class="summary-card" id="summary-container"></div>
+      <h2>今日摘要</h2>
 
-</section>
-
-    <section class="section">
-
-      <div class="section-title">
-        <h2>TOP 10 重点新闻</h2>
-      </div>
-
-      <div class="news-grid" id="news-container"></div>
+      <div id="summary" class="summary-grid"></div>
 
     </section>
-<section class="section">
 
-  <div class="section-title">
-    <h2>Signal 趋势观察</h2>
+    <!-- 趋势 -->
+
+    <section>
+
+      <h2>行业趋势信号</h2>
+
+      <div id="signals" class="signals-grid"></div>
+
+    </section>
+
+    <!-- 新闻 -->
+
+    <section>
+
+      <h2>TOP10 重点新闻</h2>
+
+      <div id="news" class="news-grid"></div>
+
+    </section>
+
   </div>
 
-  <div class="signal-grid" id="signal-container"></div>
-
-</section>
-<section class="section">
-
-<div class="archive-section">
-
-  <h2>历史归档</h2>
-
-  <div id="archive-list"></div>
-
-</div>
-
-  <div class="archive-list" id="archive-container"></div>
-
-</section>
-  </div>
-
-  <script src="app.js"></script>
+  <script src="./app.js"></script>
 
 </body>
 
